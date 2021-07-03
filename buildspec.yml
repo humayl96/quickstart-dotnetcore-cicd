@@ -8,9 +8,8 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output WebApplicationSample/WebApplicationSample.csproj
+      - cp -r ./.ebextension ./build_output/
 artifacts:
   files:
     - ./**/*
-  base-directory: 
-    - './build_output'
-    - './.ebextension'
+  base-directory: './build_output'
