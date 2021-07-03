@@ -11,4 +11,6 @@ phases:
 artifacts:
   files:
     - ./**/*
-  base-directory: './build_output ./.ebextension'
+  base-directory: 
+    - './build_output'
+    - './.ebextension'
